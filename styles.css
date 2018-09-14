@@ -6,6 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Titillium Web';
+  overflow-x: hidden;
 }
 
 h2, h1, p {
@@ -68,24 +69,20 @@ a {
 
 #nav-toggle {
   position: fixed;
-  bottom: 2vw;
-  right: 2vw;
+  bottom: 2.5vw;
+  right: 2.5vw;
   z-index: 2;
   font-size: 3em;
-  color: white;
+  color: black;
 }
 
 /*==============*/
 /* Landing Page */
 /*==============*/
 
-.signature {
-  width: 70vw;
-}
-
 #landing {
   height: 100vh;
-  background: linear-gradient(#2f2f2f 50%, black);
+  background: #FFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,11 +90,39 @@ a {
   flex-direction: column;
 }
 
+@keyframes PhotoPan {
+    0% {left: 200%;}
+    100% {left: -400%;}
+}
+
+.landingPhoto {
+    max-height: 100vh;
+    position: relative;
+    opacity: .9;
+    animation-name: PhotoPan;
+    animation-duration: 200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
 #landing > .name {
   text-align: center;
   color: white;
   font-weight: 300;
   color: grey;
+
+  /* The image used */
+  background-image: url("/images/citypano.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*===============*/
@@ -105,24 +130,27 @@ a {
 /*===============*/
 
 #about {
+  height: 100vh;
   padding: 10vw 0;
-  background: linear-gradient(#000 60%, #2f2f2f);
+  background: linear-gradient(#FFF, #77bbee);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+#about > * {
+  padding: 2vw 5vw;
+}
 
 #about > p {
-  padding: 2vw 5vw;
   text-align: center;
   font-size: 1.2em;
   line-height: 2em;
   font-weight: 300;
-  color: white;
+  color: black;
 }
 
 #about > h1 {
-  color: white;
+  color: black;
   font-weight: 300;
 }
 
