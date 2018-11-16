@@ -37,6 +37,11 @@ a {
   text-align: center;
 }
 
+.inlineImage {
+    max-width: 100vw;
+    position: relative;
+}
+
 /* MAIN PAGE */
 
 /*=================*/
@@ -91,13 +96,16 @@ a {
 }
 
 @keyframes PhotoPan {
-    0% {left: 200%;}
-    100% {left: -400%;}
+    /* 0% {left: 200%;}
+    100% {left: -400%;} */
+    0% {left: 300vw;}
+    100% {left: -300vw;}
 }
 
 .landingPhoto {
     max-height: 100vh;
     position: relative;
+    repeat
     opacity: .9;
     animation-name: PhotoPan;
     animation-duration: 200s;
@@ -128,34 +136,109 @@ a {
 /*===============*/
 /* About Me Page */
 /*===============*/
-
 #about {
-  height: 100vh;
   padding: 10vw 0;
-  background: linear-gradient(#FFF, #77bbee);
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
+
 #about > * {
   padding: 2vw 5vw;
+  color: black;
+  font-weight: 300;
 }
 
 #about > p {
   text-align: center;
   font-size: 1.2em;
   line-height: 2em;
-  font-weight: 300;
   color: black;
 }
 
 #about > h1 {
-  color: black;
-  font-weight: 300;
+  font-size: 2em;
 }
 
 .headshot {
   width: 80vw;
+}
+
+/*===============*/
+/* Product Page */
+/*===============*/
+#product {
+  padding: 10vw 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#product > * {
+  padding: 2vw 5vw;
+  color: black;
+  font-weight: 300;
+}
+
+#product > p {
+  font-size: 1.2em;
+  line-height: 2em;
+  color: black;
+}
+
+#product > h1 {
+  font-size: 2em;
+}
+
+/*===============*/
+/* Use Cases */
+/*===============*/
+#uses {
+  padding:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.useItem {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.use1 {
+  background-image: url('./images/ParadiseFire2.webp');
+  background-position: 33% 0;
+}
+
+.use2 {
+  background-image: url('./images/Solar.jpg');
+  background-position: 40% 0;
+}
+
+.use3 {
+  background-image: url('./images/OffGrid.jpeg');
+  background-position: 33% 0;
+}
+
+#uses > * {
+  padding: 2vw 5vw;
+  color: black;
+  font-weight: 300;
+}
+
+#uses > p {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 2em;
+  color: black;
+}
+
+#uses > h1 {
+  font-size: 2em;
 }
 
 /*===============================*/
