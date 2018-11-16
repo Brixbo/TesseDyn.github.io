@@ -98,7 +98,7 @@ a {
 @keyframes PhotoPan {
     /* 0% {left: 200%;}
     100% {left: -400%;} */
-    0% {left: 300vw;}
+    0% {left: 200vw;}
     100% {left: -300vw;}
 }
 
@@ -210,7 +210,7 @@ a {
 }
 
 .use1 {
-  background-image: url('./images/ParadiseFire2.webp');
+  background-image: url('./images/ParadiseFire.jpg');
   background-position: 33% 0;
 }
 
