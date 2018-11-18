@@ -20,25 +20,33 @@ a {
   outline:none;
 }
 
+.white {
+  color: white;
+}
+
 .card {
   background: grey;
-  border-radius: 5px;
+  border-radius: 5px;x
   border: 1px solid #2f2f2f;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   z-index: 1;
   padding: 5vw 0;
-  width: 90%;
+  width: 75vw;
+}
+
+.cardWhite {
+  background: white;
+  border: 1px solid grey;
 }
 
 .title {
   font-size: 2em;
-  color: white;
   font-weight: 300;
   text-align: center;
 }
 
 .inlineImage {
-    max-width: 100vw;
+    max-width: 100%;
     position: relative;
 }
 
@@ -65,11 +73,6 @@ a {
   width: 80vw;
   height: 100vh;
   background: grey;
-}
-
-.nav-signature {
-  height: 20vw;
-  color: black;
 }
 
 #nav-toggle {
@@ -102,17 +105,22 @@ a {
     100% {left: -300vw;}
 }
 
+.logo {
+  max-width: 80vw;
+  position: absolute;
+  top: 7vh;
+  z-index: 1;
+}
+
 .landingPhoto {
     max-height: 100vh;
     position: relative;
-    repeat
     opacity: .9;
     animation-name: PhotoPan;
     animation-duration: 200s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-
 
 #landing > .name {
   text-align: center;
@@ -169,7 +177,7 @@ a {
 /* Product Page */
 /*===============*/
 #product {
-  padding: 10vw 0;
+  padding-bottom: 10vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,6 +215,18 @@ a {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.useItem > h2 {
+  padding-top: 10vh;
+  color: white;
+  font-weight: 300;
+  font-size: 2em;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
 .use1 {
