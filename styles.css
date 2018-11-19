@@ -307,7 +307,7 @@ a {
 /*===============*/
 /* DeskTop Styes */
 /*===============*/
-@media (min-width: 600px) {
+@media (min-width: 800px) {
 
   .card {
     width: 25vw;
@@ -348,34 +348,6 @@ a {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 25vw 25vw 25vw 25vw;
-    grid-template-rows: 20vh 70vh;
-    grid-template-areas:
-    "header header header header"
-    "name1 name2 name3 name4";
-  }
-
-  #team > a {
-    margin: 0;
-    padding: 0;
-  }
-
-  #team > .title {
-    grid-area: header;
-  }
-
-  .cardName {
-    width: 20vw;
-  }
-}
-
-@media (max-width: 950px) {
-  #team {
-    justify-items: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    display: grid;
     grid-template-columns: 50vw 50vw;
     grid-template-rows: 20vh 50vh 50vh;
     grid-template-areas:
@@ -395,5 +367,34 @@ a {
 
   .cardName {
     width: 40vw;
+  }
+
+}
+
+@media (min-width: 1050px) {
+  #team {
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    grid-template-rows: 20vh 70vh;
+    grid-template-areas:
+    "header header header header"
+    "name1 name2 name3 name4";
+  }
+
+  #team > a {
+    margin: 0;
+    padding: 0;
+  }
+
+  #team > .title {
+    grid-area: header;
+  }
+
+  .cardName {
+    width: 20vw;
   }
 }
