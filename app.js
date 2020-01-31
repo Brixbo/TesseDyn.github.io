@@ -15,6 +15,8 @@ $(document).ready(function(){
 
   $(".nav>a").click(function(){
     $(".nav").css("display", "none");
+    $("#nav-toggle").removeClass("lnr lnr-cross");
+    $("#nav-toggle").addClass("lnr lnr-menu");
   })
 
   $(window).scroll(function(){
