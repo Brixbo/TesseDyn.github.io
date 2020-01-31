@@ -61,8 +61,10 @@ a {
   justify-content: space-around;
   text-decoration: none;
   font-size: 2em;
-  margin: 3vh 0;
+  font-weight: 100;
+  padding: 3vh 0;
   color: #2f2f2f;
+  border-bottom: 1px solid black;
 }
 
 .nav {
@@ -70,16 +72,17 @@ a {
   position: fixed;
   display: none;
   bottom: 0;
+  right: 0;
   width: 80vw;
-  height: 100vh;
-  background: grey;
+  height: 100%;
+  background: white;
 }
 
 #nav-toggle {
   position: fixed;
   bottom: 2.5vw;
   right: 2.5vw;
-  z-index: 2;
+  z-index: 3;
   font-size: 3em;
   color: black;
 }
@@ -117,7 +120,7 @@ a {
     position: relative;
     opacity: .9;
     animation-name: PhotoPan;
-    animation-duration: 200s;
+    animation-duration: 120s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -397,5 +400,16 @@ a {
 
   .cardName {
     width: 20vw;
+  }
+
+  .nav {
+    z-index: 2;
+    position: fixed;
+    display: none;
+    bottom: 0;
+    right: 0;
+    width: 20vw;
+    height: 100%;
+    background: white;
   }
 }
