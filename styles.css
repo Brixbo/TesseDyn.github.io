@@ -88,8 +88,14 @@ header > a {
   width: 70vw;
   height: 100%;
   padding: 0 20px;
-  background: white;
+  background-color: white;
 }
+
+#nav-toggle.scrolled {
+  color: black !important;
+  transition: color 200ms linear;
+}
+
 
 #nav-toggle {
   position: fixed;
@@ -97,7 +103,7 @@ header > a {
   right: 2.5vw;
   z-index: 3;
   font-size: 3em;
-  color: black;
+  color: white;
 }
 
 /*==============*/
@@ -147,45 +153,28 @@ header > a {
 }
 
 /*===============*/
-/* About Page */
-/*===============*/
-#about {
-  padding: 10vw 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-#about > * {
-  padding: 2vw 5vw;
-  color: black;
-  font-weight: 300;
-}
-
-#about > p {
-  text-align: center;
-  font-size: 1.2em;
-  line-height: 2em;
-  color: black;
-}
-
-#about > h1 {
-  font-size: 3em;
-}
-
-.headshot {
-  width: 80vw;
-}
-
-/*===============*/
 /* Product Page */
 /*===============*/
+
 #product {
-  padding-bottom: 10vw;
-  display: flex;
-  flex-direction: column;
+  height: 94vh;
+  padding: 2vh 0 4vh 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr 7fr 1fr 1fr;
+  grid-template-areas:
+    "product"
+    "desc"
+    "body"
+    "btn1"
+    "btn2";
+
   align-items: center;
+  text-align: center;
+  justify-items: center;
+  background-image: url('./images/modulePic.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #product > * {
@@ -194,14 +183,66 @@ header > a {
   font-weight: 300;
 }
 
-#product > p {
+/* #product > p {
+  text-align: center;
   font-size: 1.2em;
   line-height: 2em;
   color: black;
-}
+} */
 
 #product > h1 {
-  font-size: 2em;
+  font-size: 2.5em;
+  grid-area: product;
+  color: white;
+}
+
+#product > h2 {
+  grid-area: desc;
+  color: white;
+}
+
+.headshot {
+  width: 80vw;
+}
+
+#product > .btn {
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 400;
+  width: 60vw;
+  border-radius: 25px;
+  margin: 1vh 0;
+  border: 1px solid black;
+  background: white;
+}
+
+.mbtn {
+  grid-area: btn1;
+}
+
+.obtn {
+  grid-area: btn2;
+}
+
+/*=========*/
+/* Contact */
+/*=========*/
+
+#contact {
+  height: 15vh;
+  padding: 2vh 0 4vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact > a {
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  font-weight: 300;
+  margin: 15px 0;
 }
 
 /*===============*/

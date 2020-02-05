@@ -23,4 +23,11 @@ $(document).ready(function(){
     $(".title").css("top",Math.max(0,250-$(this).scrollTop()));
   });
 
+  $(function () {
+  $(document).scroll(function () {
+    var $nav = $("#nav-toggle");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
 })
