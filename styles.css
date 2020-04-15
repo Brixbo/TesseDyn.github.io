@@ -171,10 +171,11 @@ header > a {
   align-items: center;
   text-align: center;
   justify-items: center;
-  background-image: url('./images/modulePic.jpeg');
+  background-image: url('./images/PowerTree3.JPG');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-color: #1e1e1e;
 }
 
 #product > * {
