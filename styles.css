@@ -91,20 +91,28 @@ header > a {
   background-color: white;
 }
 
-#nav-toggle.scrolled {
+.nav-toggle.scrolled {
   color: black !important;
   transition: color 200ms linear;
 }
 
-
-#nav-toggle {
+.nav-toggle {
   position: fixed;
   bottom: 2.5vw;
   right: 2.5vw;
   z-index: 3;
   font-size: 3em;
+}
+
+#nav-toggle-index {
   color: white;
 }
+
+#nav-toggle-black {
+  color: black;
+}
+
+
 
 /*==============*/
 /* Landing Page */
@@ -158,9 +166,11 @@ header > a {
 
 #product {
   height: 94vh;
+  width: 100vw;
   padding: 2vh 0 4vh 0;
   display: grid;
   grid-template-rows: 1fr 1fr 7fr 1fr 1fr;
+  grid-template-columns: 100vw;
   grid-template-areas:
     "product"
     "desc"
@@ -171,11 +181,11 @@ header > a {
   align-items: center;
   text-align: center;
   justify-items: center;
-  background-image: url('./images/PowerTree3.JPG');
+  background-image: url('./images/FRender1.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #1e1e1e;
+  background-size: auto 70vh;
+  background-color: white;
 }
 
 #product > * {
@@ -194,12 +204,12 @@ header > a {
 #product > h1 {
   font-size: 2.5em;
   grid-area: product;
-  color: white;
+  color: black;
 }
 
 #product > h2 {
   grid-area: desc;
-  color: white;
+  color: black;
 }
 
 .headshot {
@@ -231,7 +241,7 @@ header > a {
 
 #contact {
   height: 15vh;
-  padding: 2vh 0 4vh 0;
+  padding: 0 0 1vh 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -243,7 +253,7 @@ header > a {
   color: black;
   font-size: 1em;
   font-weight: 300;
-  margin: 15px 0;
+  margin: 5px 0;
 }
 
 /*===============*/
@@ -435,9 +445,12 @@ header > a {
   text-align: center;
 }
 
-/*===============*/
-/* DeskTop Styes */
-/*===============*/
+/*=============================================================================*/
+/*=============================================================================*/
+                                  /* DeskTop Styes */
+/*=============================================================================*/
+/*=============================================================================*/
+
 @media (min-width: 800px) {
 
   .card {
@@ -463,6 +476,70 @@ header > a {
 
   #product, #about {
        padding: 0;
+  }
+
+  #product {
+    height: 114vh;
+    width: 100vw;
+    padding: 2vh 0 4vh 0;
+    display: grid;
+    grid-template-rows: 80vh 10vh 10vh 7vh 7vh;
+    grid-template-areas:
+      "body"
+      "product"
+      "desc"
+      "btn1"
+      "btn2";
+
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    background-image: url('./images/FirstRender.png');
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+    background-color: white;
+  }
+
+
+  #product > * {
+    padding: 2vw 5vw;
+    color: black;
+    font-weight: 300;
+  }
+
+  /* #product > p {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 2em;
+    color: black;
+  } */
+
+  #product > h1 {
+    font-size: 2.5em;
+    grid-area: product;
+    color: black;
+  }
+
+  #product > h2 {
+    grid-area: desc;
+    color: black;
+  }
+
+  .headshot {
+    width: 80vw;
+  }
+
+  #product > .btn {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    width: 20vw;
+    border-radius: 25px;
+    margin: 1vh 0;
+    border: 1px solid black;
+    background: white;
+    padding: 1vh 0;
   }
 
   #about > h2 {
@@ -496,33 +573,20 @@ header > a {
     width: 35vw;
   }
 
-}
 
-@media (min-width: 1050px) {
-  #team {
-    justify-items: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 25vw 25vw 25vw 25vw;
-    grid-template-rows: 20vh 70vh;
-    grid-template-areas:
-    "header header header header"
-    "name1 name2 name3 name4";
-  }
+  /*=================*/
+  /* Navigation Menu */
+  /*=================*/
 
-  #team > a {
-    margin: 0;
-    padding: 0;
-  }
-
-  #team > .title {
-    grid-area: header;
-  }
-
-  .cardName {
-    width: 20vw;
+  .nav > a {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 100;
+    padding: 3vh 0;
+    color: #2f2f2f;
+    border-bottom: 1px solid grey;
   }
 
   .nav {
@@ -533,6 +597,84 @@ header > a {
     right: 0;
     width: 20vw;
     height: 100%;
-    background: white;
+    padding: 0 20px;
+    background-color: white;
   }
+
+  .nav-toggle.scrolled {
+    color: black !important;
+    transition: color 200ms linear;
+  }
+
+
+  .nav-toggle {
+    position: fixed;
+    bottom: 2.5vw;
+    right: 2.5vw;
+    z-index: 3;
+    font-size: 3em;
+    color: white;
+  }
+
+  #contact {
+    height: 10vh;
+    padding: 0 0 1vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #contact > a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    font-weight: 300;
+    margin: 5px 0;
+  }
+
+  /*=================*/
+  /* Jobs Page */
+  /*=================*/
+
+  #jobsPage > * {
+    padding: 2vw 5vw;
+    color: black;
+    font-weight: 300;
+  }
+
+  #jobsPage > p {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 2em;
+    color: black;
+  }
+
+  #jobsPage > h1 {
+    font-size: 2em;
+    margin: 5% 0 2% 0;
+  }
+
+  .jobListing {
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+    border-top: 1px solid lightgrey;
+  }
+
+  .jobListing > * {
+    margin: 2px 0;
+  }
+
+  .jobListing > h2 {
+    font-weight: 300;
+    font-size: 1em;
+  }
+
+  .jobListing > h3 {
+    font-weight: 200;
+    font-size: 1em;
+  }
+
+
 }
