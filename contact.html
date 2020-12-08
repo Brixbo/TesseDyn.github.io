@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>brixbo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:100,300,400,500i,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <span id="nav-toggle-black" class="nav-toggle lnr lnr-menu"></span>
+
+  <!-- Nav Bar -->
+  <nav class="nav">
+    <a href="/index.html#about">b r i x b o</a>
+    <a href="/index.html#product">Power Tree</a>
+    <a href="/jobs.html">Jobs</a>
+    <!-- <a href="/contact.html">Contact</a> -->
+  </nav>
+
+
+  <header>
+    <a href="/index.html">
+      <img class="logoNav" src="/images/brixboLogos/brixbo_Bk.png" alt="">
+    </a>
+  </header>
+
+  <!-- About brixbo -->
+  <!-- entry.734148901=filler entry.1414559710=filler entry.271635428=filler -->
+
+  <section id="contactPage">
+    <h1>Contact</h1>
+    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdaMlxDQke4m3lPSD33ykmFGw8xG5k0vEGKDH47il-bMovpSQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+      <input type="text" placeholder="Name" name="entry.734148901" id="entry.734148901">
+
+      <input type="text" placeholder="Email" name="entry.1414559710" id="entry.1414559710">
+
+      <textarea type="text" placeholder="Message" name="entry.271635428" id="entry.271635428"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+  </section>
+
+  <section id="footer">
+    <p>b r i x b o &copy; 2020</p>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="app.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript">var submitted=false;</script>
+  <script type="text/javascript">
+    $('#gform').on('submit', function(e) {
+      $('#gform *').fadeOut(2000);
+      $('#gform').prepend('Your submission has been processed...');
+    });
+  </script>
+</body>
+</html>

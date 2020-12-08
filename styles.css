@@ -8,6 +8,7 @@ html, body {
   /* font-family: 'Titillium Web'; */
   font-family: 'Exo 2', sans-serif;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 h3, h2, h1, p {
@@ -236,24 +237,23 @@ header > a {
 }
 
 /*=========*/
-/* Contact */
+/* Footer */
 /*=========*/
 
-#contact {
-  height: 15vh;
-  padding: 0 0 1vh 0;
+#footer {
+  height: 10vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
-#contact > a {
+#footer > p {
   text-decoration: none;
+  align-self: center;
   color: black;
   font-size: 1em;
   font-weight: 300;
-  margin: 5px 0;
 }
 
 /*===============*/
@@ -445,6 +445,60 @@ header > a {
   text-align: center;
 }
 
+/*===================*/
+/* Job Listings page */
+/*===================*/
+
+#contactPage {
+  border-top: 1px solid grey;
+}
+
+#contactPage > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 60vh;
+  margin: 2.5vh 0 2.5vh 0;
+}
+
+#contactPage > h1 {
+  text-align: center;
+  font-size: 1em;
+  line-height: 2em;
+  color: black;
+  font-weight: bold;
+  margin: 5vh 0 0 0;
+}
+
+#contactPage > form > * {
+  width: 75vw;
+  font-size: 1em;
+  height: 5vh;
+  padding: 0 1vh 0 1vh;
+  font-family: inherit;
+  border-width: thin;
+  border-style: solid;
+}
+
+#contactPage > form > input[type=submit] {
+  width: 20vw;
+  background-color: #6FB3EC;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+}
+
+#contactPage > form > textarea {
+  max-width: 75vw;
+  min-width: 75vw;
+  height: 30vh;
+  max-height: 30vh;
+  min-height: 30vh;
+  padding: 1vh;
+  font-family: inherit;
+}
+
 /*=============================================================================*/
 /*=============================================================================*/
                                   /* DeskTop Styes */
@@ -616,7 +670,7 @@ header > a {
     color: white;
   }
 
-  #contact {
+  #footer {
     height: 10vh;
     padding: 0 0 1vh 0;
     display: flex;
@@ -625,7 +679,7 @@ header > a {
     justify-content: center;
   }
 
-  #contact > a {
+  #footer > a {
     text-decoration: none;
     color: black;
     font-size: 1em;
@@ -676,5 +730,27 @@ header > a {
     font-size: 1em;
   }
 
+  /*===================*/
+  /* Contact page */
+  /*===================*/
+
+  #contactPage > h1 {
+    font-size: 2em;
+  }
+
+  #contactPage > form > * {
+    width: 35vw;
+    padding: 0 1vw 0 1vw;
+  }
+
+  #contactPage > form > input[type=submit] {
+    width: 7.5vw;
+  }
+
+  #contactPage > form > textarea {
+    max-width: 35vw;
+    min-width: 35vw;
+    padding: 1vw;
+  }
 
 }
