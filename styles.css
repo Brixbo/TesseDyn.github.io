@@ -214,74 +214,117 @@ header > a {
 /*===============*/
 
 #product {
-  height: 94vh;
-  width: 100vw;
-  padding: 2vh 0 4vh 0;
-  display: grid;
-  grid-template-rows: 1fr 1fr 7fr 1fr 1fr;
-  grid-template-columns: 100vw;
-  grid-template-areas:
-    "product"
-    "desc"
-    "body"
-    "btn1"
-    "btn2";
+  background: #FFF;
+  height: auto;
 
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  align-content: space-between;
+  text-align: left;
+}
+
+#product > a {
+  padding: 0;
+  align-self: center;
+}
+
+#product > a > .logo {
+  height: 2.5em;
+  z-index: 1;
+  margin-top: 1em;
+  padding: 0;
+}
+
+#product > .vanPan {
+  object-fit: cover;
+  object-position: 30%;
+
+  height: 70vh;
+  max-width: 100%;
+
+  z-index: 0;
+  padding: 2vh 0;
+}
+
+#product > .infoPics {
+  object-fit: cover;
+  object-position: -50vw;
+  min-width: 200vw;
+  padding: 2vh 0;
+}
+
+#product > .infoPic, #product > .scalePic{
+  display: none;
+}
+
+#product > .prodSumm {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  color: white;
   align-items: center;
   text-align: center;
-  justify-items: center;
-  background-image: url('./images/FRender1.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto 70vh;
-  background-color: white;
+  padding: 2vh 0;
+  margin: 2vh 0;
 }
 
-#product > * {
-  padding: 2vw 5vw;
+#product > .prodSumm { // REMOVE
+  display: none;
+}
+
+.specLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-around;
+  text-decoration: none;
+}
+
+.specLink > img {
+  width: 20vw;
+}
+
+.specLink > h2 {
+  font-weight: 300;
+  color: white;
+}
+
+#product > h1,
+#product > h2,
+#product > p  {
   color: black;
   font-weight: 300;
+  padding: 1vh 5vw;
+  align-self: left;
 }
-
-/* #product > p {
-  text-align: center;
-  font-size: 1.2em;
-  line-height: 2em;
-  color: black;
-} */
 
 #product > h1 {
   font-size: 2.5em;
-  grid-area: product;
-  color: black;
 }
 
-#product > h2 {
-  grid-area: desc;
-  color: black;
+#product > p {
+  font-size: 1.25em;
 }
 
-.headshot {
-  width: 80vw;
-}
-
-#product > .btn {
+#product > .prodSumm > .btn {
   text-decoration: none;
   font-size: 1em;
   font-weight: 400;
+  color: white;
   width: 60vw;
+  padding: 0.5em;
   border-radius: 25px;
-  margin: 1vh 0;
+  margin: 2vh;
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+#product > .prodSumm > .btn:hover {
+  color: black;
   border: 1px solid black;
-  background: white;
-}
-
-.mbtn {
-  grid-area: btn1;
-}
-
-.obtn {
-  grid-area: btn2;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 /*=========*/
@@ -305,106 +348,8 @@ header > a {
 }
 
 /*===============*/
-/* Use Cases */
+/*   Use Cases   */
 /*===============*/
-#uses {
-  padding:0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.useItem {
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.useItem > h1 {
-  padding-top: 10vh;
-  font-weight: 300;
-  font-size: 2.5em;
-  color: white;
-  /* text-shadow:
-		-1px -1px 0 #333,
-		1px -1px 0 #333,
-		-1px 1px 0 #333,
-		1px 1px 0 #333;
- */
-}
-
-.use1 {
-  background-image: url('./images/Fire.jpg');
-  background-position: 100% 60%;
-}
-
-.use2 {
-  background-image: url('./images/Solar2.jpg');
-  background-position: 0% 100%;
-}
-
-.use3 {
-  background-image: url('./images/OffGrid.jpeg');
-  background-position: 33% 0%;
-}
-
-#uses > * {
-  padding: 2vw 5vw;
-  color: black;
-  font-weight: 300;
-}
-
-#uses > p {
-  text-align: center;
-  font-size: 1.2em;
-  line-height: 2em;
-  color: black;
-}
-
-#uses > h1 {
-  font-size: 2em;
-}
-
-/*===============================*/
-/* team and Experience Pages */
-/*===============================*/
-
-#team {
-  padding-top: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#team > a  {
-  margin: 5vh 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-  font-weight: 300;
-}
-
-#team > a > img {
-  width: 80vw;
-}
-
-#team > a > p{
-  padding-top: 2vh;
-  margin: 0 10vw;
-  text-align: center;
-}
-
-#team > a > h1{
-  font-weight: 300;
-}
-
-#team > a > h2 {
-  font-size: 1em;
-  font-weight: 300;
-}
 
 /*===================*/
 /* Job Listings page */
@@ -424,7 +369,6 @@ header > a {
 #jobsPage > ul > li{
   display: inline-block;
 }
-
 
 #jobsPage > * {
   padding: 2vw 5vw;
@@ -468,10 +412,6 @@ header > a {
 /*=============*/
 /* OTHER PAGES */
 /*=============*/
-
-.test {
-  background: #2f2f2f;
-}
 
 .header {
   background: grey;
@@ -550,14 +490,6 @@ header > a {
 
 @media (min-width: 800px) {
 
-  .card {
-    width: 25vw;
-  }
-
-  @keyframes PhotoPan {
-      0% {left: 50vw;}
-      100% {left: -50vw;}
-  }
 
   /*==============*/
   /* Landing Page */
@@ -591,113 +523,164 @@ header > a {
 
 /* ------------------------------------------ */
 
-   #aboutProduct {
-       display: flex;
-       flex-direction: row;
-       align-items: center;
-       text-align: center;
-       margin: 25vh 5vw;
-   }
-
-  #product, #about {
-       padding: 0;
-  }
-
   #product {
-    height: 114vh;
-    width: 100vw;
-    padding: 2vh 0 4vh 0;
-    display: grid;
-    grid-template-rows: 80vh 10vh 10vh 7vh 7vh;
-    grid-template-areas:
-      "body"
-      "product"
-      "desc"
-      "btn1"
-      "btn2";
+    background: #FFF;
 
-    align-items: center;
-    text-align: center;
-    justify-items: center;
-    background-image: url('./images/FirstRender.png');
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-size: auto 100vh;
-    background-color: white;
+    display: grid;
+    grid-template-columns: 25vw 10vw 10vw 20vw 10vw 25vw;
+    grid-template-rows:
+      10vh
+      50vh
+      6vh
+      4vh
+      30vh
+
+      50vh
+      6vh
+      8vh
+      20vh
+
+      40vh
+      5vh
+      10vh
+
+      /*10vh*/ //UNCOMMMENT
+      ;
   }
 
+  #product > .logoLink {
+    align-self: baseline;
+    grid-area: 1 / 1 / 2 / 7;
+  }
 
-  #product > * {
-    padding: 2vw 5vw;
+  #product > a > .logo {
+    height: 3em;
+    margin: 2.5vh 0 0 2.5vh;
+    z-index: 1;
+  }
+
+  #product > .vanPan {
+    object-position: top;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    grid-area: 2 / 1 / 6 / 7;
+    padding: 0;
+  }
+
+  #product > .infoPics {
+    display: none;
+  }
+
+  #product > .infoPic, #product > .scalePic{
+    display: inherit;
+  }
+
+  #product > .arcTxt { grid-area: 3 / 4 / 4 / 6; border-radius: 10px 10px 0 0;}
+  #product > .arcTxt + h2 { grid-area: 4 / 4 / 5 / 6; }
+  #product > .arcTxt + h2 + p { grid-area: 5 / 4 / 6 / 6; border-radius: 0 0 10px 10px;}
+  #product > .arcTxt,
+  #product > .arcTxt + h2,
+  #product > .arcTxt + h2 + p { color:white; background-color: #00000055;}
+
+  #product > .infoPic {
+    object-position: top;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    grid-area: 6 / 1 / 7 / 7;
+    padding: 0;
+  }
+
+  #product > .srcTxt { grid-area: 7 / 1 / 8 / 3; }
+  #product > .srcTxt + h2 { grid-area: 8 / 1 / 9 / 3 }
+  #product > .srcTxt + h2 + p { grid-area: 9 / 1 / 10 / 3; }
+
+  #product > .strTxt { grid-area: 7 / 3 / 8 / 5; }
+  #product > .strTxt + h2 { grid-area: 8 / 3 / 9 / 5; }
+  #product > .strTxt + h2 + p { grid-area: 9 / 3 / 10 / 5; }
+  #product > .strTxt,
+  #product > .strTxt + h2,
+  #product > .strTxt + h2 + p { text-align: center;}
+
+  #product > .useTxt { grid-area: 7 / 5 / 8 / 7; }
+  #product > .useTxt + h2 { grid-area: 8 / 5 / 9 / 7; }
+  #product > .useTxt + h2 + p { grid-area: 9 / 5 / 10 / 7; }
+  #product > .useTxt,
+  #product > .useTxt + h2,
+  #product > .useTxt + h2 + p { text-align: right;}
+
+  #product > .scalePic {
+    object-position: top;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    grid-area: 10 / 1 / 13 / 7;
+    padding: 0;
+  }
+
+  #product > .sclTxt { display: none;}
+  #product > .sclTxt + h2 { grid-area: 11 / 2 / 12 / 6; }
+  #product > .sclTxt + h2 + p { grid-area: 12 / 2 / 13 / 6; }
+  #product > .sclTxt,
+  #product > .sclTxt + h2,
+  #product > .sclTxt + h2 + p { color:white; text-align: center;}
+
+  #product > .prodSumm {
+    background: black;
+    display: none;       //REMOVE
+    flex-direction: row;
+    color: white;
+    margin: 0;
+    justify-content: center;
+    grid-area: 13 / 1 / 14 / 7;
+  }
+
+  .specLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+    text-decoration: none;
+  }
+
+  .specLink > img {
+    width: 20vw;
+  }
+
+  .specLink > h2 {
+    font-weight: 300;
+    color: white;
+  }
+
+  #product > h1,
+  #product > h2,
+  #product > p  {
     color: black;
     font-weight: 300;
+    padding: 1vh 1vw;
+    align-self: left;
+    z-index: 1;
   }
 
-  /* #product > p {
-    text-align: center;
-    font-size: 1.2em;
-    line-height: 2em;
-    color: black;
-  } */
-
-  #product > h1 {
-    font-size: 2.5em;
-    grid-area: product;
-    color: black;
-  }
-
-  #product > h2 {
-    grid-area: desc;
-    color: black;
-  }
-
-  .headshot {
-    width: 80vw;
-  }
-
-  #product > .btn {
+  #product > .prodSumm > .btn {
     text-decoration: none;
     font-size: 1em;
     font-weight: 400;
+    color: white;
     width: 20vw;
-    border-radius: 25px;
-    margin: 1vh 0;
-    border: 1px solid black;
-    background: white;
     padding: 1vh 0;
+    border-radius: 25px;
+    margin: 1vh 2vw;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.25);
   }
 
-  #about > h2 {
-    padding:0;
+  #product > .prodSumm > .btn:hover {
+    color: black;
+    border: 1px solid black;
+    background: rgba(255, 255, 255, 0.5);
   }
-
-  #team {
-    justify-items: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 50vw 50vw;
-    grid-template-rows: 20vh 50vh 50vh;
-    grid-template-areas:
-    "header header"
-    "name1 name2"
-    "name3 name4";
-  }
-
-  #team > a {
-    margin: 0;
-    padding: 0;
-  }
-
-  #team > .title {
-    grid-area: header;
-  }
-
-  .cardName {
-    width: 35vw;
-  }
-
 
   /*=================*/
   /* Navigation Menu */
