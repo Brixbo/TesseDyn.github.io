@@ -435,7 +435,7 @@ header > a {
 /*===================*/
 /* Job Listings page */
 /*===================*/
-
+/*
 #contactPage > form {
   display: flex;
   flex-direction: column;
@@ -481,6 +481,7 @@ header > a {
   padding: 0.5em;
   font-family: inherit;
 }
+*/
 
 /*=============================================================================*/
 /*=============================================================================*/
@@ -793,7 +794,7 @@ header > a {
   /*===================*/
   /* Contact page */
   /*===================*/
-
+/*
   #contactPage > h1 {
     font-size: 2em;
   }
@@ -805,12 +806,12 @@ header > a {
 
   /* #contactPage > form > input[type=submit] {
     width: 10em;
-  } */
+  }
 
   #contactPage > form > textarea {
     max-width: 35vw;
     min-width: 35vw;
     padding: 0.5em;
-  }
+  } */
 
 }
